@@ -18,14 +18,8 @@ bool ModuleSceneIntro::Start()
 	LOG("Loading Intro assets");
 	bool ret = true;
 
-	ImGuiContext* ctx;
 	App->camera->Move(vec3(1.0f, 1.0f, 0.0f));
 	App->camera->LookAt(vec3(0, 0, 0));
-	ImGui::NewFrame();
-	ctx = ImGui::CreateContext();
-	ImGui::SetCurrentContext(ctx);
-	ImGui::Text("Hello, world %d", 123);
-	ImGui::ShowDemoWindow();
 	
 
 	return ret;
