@@ -1,12 +1,14 @@
 #include "Globals.h"
+#include <GL/glew.h>
+#include "SDL_opengl.h"
 #include "Application.h"
 #include "ModuleRenderer3D.h"
 #include "Dependencies/SDL\include\SDL_opengl.h"
-#include <gl/GL.h>
-#include <gl/GLU.h>
+#include "imgui.h"
+#include "examples\imgui_impl_sdl.h"
+#include "examples\imgui_impl_opengl3.h"
 
-#pragma comment (lib, "glu32.lib")    /* link OpenGL Utility lib     */
-#pragma comment (lib, "opengl32.lib") /* link Microsoft OpenGL lib   */
+
 
 ModuleRenderer3D::ModuleRenderer3D(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
@@ -29,6 +31,31 @@ bool ModuleRenderer3D::Init()
 		LOG("OpenGL context could not be created! SDL_Error: %s\n", SDL_GetError());
 		ret = false;
 	}
+
+	// ImGUI
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;       // Enable Keyboards Controls
+	//io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           // Enable Docking
+	io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
+	//io.ConfigViewportsNoAutoMerge = true;
+	//io.ConfigViewportsNoTaskBarIcon = true
+
+	// DearImGUI
+	ImGui::StyleColorsDark();
+	//ImGui::StyleColorsClassic();
+
+	ImGuiStyle& style = ImGui::GetStyle();
+	if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+	{
+		style.WindowRounding = 0.0f;
+		style.Colors[ImGuiCol_WindowBg].w = 1.0f;
+	}
+
+	ImGui_ImplSDL2_InitForOpenGL(App->window->window, context);
+	ImGui_ImplOpenGL3_Init("#version 330");
 	
 	if(ret == true)
 	{

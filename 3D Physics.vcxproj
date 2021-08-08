@@ -55,7 +55,7 @@
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <StructMemberAlignment>Default</StructMemberAlignment>
       <PreprocessorDefinitions>WINDOWS_IGNORE_PACKING_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -63,8 +63,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;glew32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\lib\libWin32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -76,7 +76,7 @@
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <StructMemberAlignment>Default</StructMemberAlignment>
       <PreprocessorDefinitions>WINDOWS_IGNORE_PACKING_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -86,8 +86,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;glew32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\lib\libWin32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
