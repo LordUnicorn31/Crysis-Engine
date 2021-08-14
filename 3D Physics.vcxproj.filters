@@ -102,6 +102,9 @@
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_sdl.h">
       <Filter>Deps\imGui</Filter>
     </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_opengl3.h">
+      <Filter>Deps\imGui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Crysis Engine\Source\Color.cpp">
@@ -162,6 +165,9 @@
       <Filter>Deps\imGui</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_sdl.cpp">
+      <Filter>Deps\imGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_opengl3.cpp">
       <Filter>Deps\imGui</Filter>
     </ClCompile>
   </ItemGroup>
