@@ -3,6 +3,7 @@
 #include "p2DynArray.h"
 #include "Globals.h"
 #include "Primitive.h"
+#include "imgui.h"
 
 #define MAX_SNAKE 2
 
@@ -41,4 +42,9 @@ public:
 
 	PhysMotor3D* left_wheel;
 	PhysMotor3D* right_wheel;
+private:
+
+	bool show_demo_window;
+	bool show_another_window;
+	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 };

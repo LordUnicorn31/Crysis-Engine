@@ -24,6 +24,7 @@ bool ModuleRenderer3D::Init()
 	LOG("Creating 3D Renderer context");
 	bool ret = true;
 	
+	
 	//Create context
 	context = SDL_GL_CreateContext(App->window->window);
 	if(context == NULL)
@@ -31,22 +32,25 @@ bool ModuleRenderer3D::Init()
 		LOG("OpenGL context could not be created! SDL_Error: %s\n", SDL_GetError());
 		ret = false;
 	}
+	
+	glewInit();
 
-	// ImGUI
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO(); (void)io;
-	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;       // Enable Keyboards Controls
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;       // Enable Keyboard Controls
 	//io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           // Enable Docking
 	io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
 	//io.ConfigViewportsNoAutoMerge = true;
-	//io.ConfigViewportsNoTaskBarIcon = true
+	//io.ConfigViewportsNoTaskBarIcon = true;
+	io.ConfigDockingWithShift = false;
 
-	// DearImGUI
 	ImGui::StyleColorsDark();
 	//ImGui::StyleColorsClassic();
+	//ImGui::StyleColorsLight();
 
+	// When viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to regular ones.
 	ImGuiStyle& style = ImGui::GetStyle();
 	if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 	{
@@ -54,8 +58,9 @@ bool ModuleRenderer3D::Init()
 		style.Colors[ImGuiCol_WindowBg].w = 1.0f;
 	}
 
-	ImGui_ImplSDL2_InitForOpenGL(App->window->window, context);
-	ImGui_ImplOpenGL3_Init(" #version 330");
+	// Setup Platform/Renderer bindings
+	ImGui_ImplSDL2_InitForOpenGL(App->window->window, App->renderer3D->context);
+	ImGui_ImplOpenGL3_Init("#version 460");
 
 	
 	if(ret == true)
@@ -161,6 +166,10 @@ bool ModuleRenderer3D::CleanUp()
 	LOG("Destroying 3D Renderer");
 
 	SDL_GL_DeleteContext(context);
+
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplSDL2_Shutdown();
+	ImGui::DestroyContext();
 
 	return true;
 }
