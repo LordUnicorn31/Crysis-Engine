@@ -21,11 +21,15 @@ public:
 
 
 	void ExampleWindow();
+	void MenuWindow();
 
 private:
 
 	bool showDemoWindow = true;
 	bool anotherWindow = false;
+	bool toolActive;
+
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+
 
 };
