@@ -51,6 +51,28 @@ update_status ModuleCamera3D::Update(float dt)
 	if(App->input->GetKey(SDL_SCANCODE_W) == KEY_REPEAT) newPos -= Z * speed;
 	if(App->input->GetKey(SDL_SCANCODE_S) == KEY_REPEAT) newPos += Z * speed;
 
+	// Camera zoom in/out
+	if (App->input->GetMouseZ())
+	{
+		if (App->input->GetMouseZ() > 0)
+		{
+			// Zoom in
+			newPos -= Z * speed;
+		}
+		if (App->input->GetMouseZ() < 0)
+		{
+			// Zoom out
+			newPos += Z * speed;
+		}
+
+	}
+
+	//Camera translation
+	if (App->input->GetMouseButton(SDL_BUTTON_MIDDLE) == KEY_REPEAT)
+	{
+		CameraMovement(newPos, speed, dt);
+	}
+
 
 	if(App->input->GetKey(SDL_SCANCODE_A) == KEY_REPEAT) newPos -= X * speed;
 	if(App->input->GetKey(SDL_SCANCODE_D) == KEY_REPEAT) newPos += X * speed;
@@ -153,4 +175,16 @@ void ModuleCamera3D::CalculateViewMatrix()
 {
 	ViewMatrix = mat4x4(X.x, Y.x, Z.x, 0.0f, X.y, Y.y, Z.y, 0.0f, X.z, Y.z, Z.z, 0.0f, -dot(X, Position), -dot(Y, Position), -dot(Z, Position), 1.0f);
 	ViewMatrixInverse = inverse(ViewMatrix);
+}
+
+void ModuleCamera3D::CameraMovement(vec3 camPos, float speed, float dt)
+{
+	int posX = App->input->GetMouseX();
+	int posY = App->input->GetMouseY();
+
+	if (posX > 0)
+	{
+		camPos += X * speed * dt;
+	}
+	else camPos -= X * speed * dt;
 }

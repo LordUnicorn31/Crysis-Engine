@@ -21,6 +21,7 @@ public:
 private:
 
 	void CalculateViewMatrix();
+	void CameraMovement(vec3 camPos, float speed, float dt);
 
 public:
 	
