@@ -55,6 +55,9 @@ bool ModuleGUI::Init()
 	showDemoWindow = true;
 	anotherWindow = false;
 	toolActive = true;
+	docking = true;
+	hierarchy = true;
+	inspector = true;
 
 	return true;
 }
@@ -67,8 +70,11 @@ update_status ModuleGUI::Update(float dt)
 	ImGui::NewFrame();
 
 	// Core of ImGui
+	Docking();
 	ExampleWindow();
-	MenuWindow();
+	HierarchyTab();
+	AssetsTab();
+	InspectorTab();
 
 	// End of frame
 	
@@ -114,35 +120,105 @@ void ModuleGUI::ExampleWindow()
 
 }
 
+void ModuleGUI::Docking()
+{
+	ImGuiWindowFlags window_flags = ImGuiWindowFlags_MenuBar;
+	ImGuiViewport* viewport = ImGui::GetMainViewport();
+	ImGui::SetNextWindowPos(viewport->Pos);
+	ImGui::SetNextWindowSize(viewport->Size);
+	ImGui::SetNextWindowViewport(viewport->ID);
+	ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 0.0f);
+	ImGui::PushStyleVar(ImGuiStyleVar_WindowBorderSize, 0.0f);
+	window_flags |= ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove;
+	window_flags |= ImGuiWindowFlags_NoNavFocus | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoBackground;
+	ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0.0f, 0.0f));
+
+	if (ImGui::Begin("DockSpace", &docking, window_flags)) {
+		// DockSpace
+		ImGui::PopStyleVar(3);
+		if (docking)
+		{
+			ImGuiID dockspace_id = ImGui::GetID("DockSpace");
+			ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), ImGuiDockNodeFlags_PassthruCentralNode);
+			MenuWindow();
+		}
+		ImGui::End();
+	}
+}
+
 void ModuleGUI::MenuWindow()
 {
-	ImGui::Begin("Menu", &toolActive, ImGuiWindowFlags_MenuBar);
 	if (ImGui::BeginMenuBar())
 	{
 		if (ImGui::BeginMenu("File"))
 		{
-			if (ImGui::MenuItem("Open..", "Ctrl+O")) { /* Do stuff */ }
+			if (ImGui::MenuItem("New Scene", "Ctrl+N")) {};
+			if (ImGui::MenuItem("Open Scene", "Ctrl+O")) { /* Do stuff */ }
 			if (ImGui::MenuItem("Save", "Ctrl+S")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Save As", "Ctrl+Shift+S")) {};
 			if (ImGui::MenuItem("Close", "Ctrl+W")) { toolActive = false; }
-			if (ImGui::MenuItem("Close Engine")) {  }
+			if (ImGui::MenuItem("Exit")) { state == UPDATE_STOP; }
+			ImGui::EndMenu();
+		}
+
+		if (ImGui::BeginMenu("Edit"))
+		{
+			ImGui::EndMenu();
+		}
+		if (ImGui::BeginMenu("Assets"))
+		{
+			if (ImGui::BeginMenu("Create"))
+			{
+				if (ImGui::MenuItem("Sphere")) {};
+				if (ImGui::MenuItem("Square")) {};
+				if (ImGui::MenuItem("Cone")) {};
+				if (ImGui::MenuItem("Empty GameObject")) 
+				{
+
+				};
+				ImGui::EndMenu();
+			}
+			if (ImGui::MenuItem("Import New Asset")) {};
 			ImGui::EndMenu();
 		}
 		ImGui::EndMenuBar();
 	}
 
-	// Edit a color (stored as ~4 floats)
-	ImGui::ColorEdit4("Color", (float*)&clear_color);
+}
 
-	// Plot some values
-	const float my_values[] = { 0.2f, 0.1f, 1.0f, 0.5f, 0.9f, 2.2f };
-	ImGui::PlotLines("Frame Times", my_values, IM_ARRAYSIZE(my_values));
+void ModuleGUI::HierarchyTab()
+{
+	if (hierarchy)
+	{
+		if (ImGui::Begin("Hierarchy", &hierarchy))
+		{
+			// Place for gameobjects
+		}
+		ImGui::End();
+	}
+}
 
-	// Display contents in a scrolling region
-	ImGui::TextColored(ImVec4(1, 1, 0, 1), "Important Stuff");
-	ImGui::BeginChild("Scrolling");
-	for (int n = 0; n < 50; n++)
-		ImGui::Text("%04d: Some text", n);
-	ImGui::EndChild();
+void ModuleGUI::AssetsTab()
+{
+	if (assets)
+	{
+		if (ImGui::Begin("Assets", &assets)) 
+		{
+			// Place for all the imported assets
+		};
+		ImGui::End();
+	}
+}
+
+void ModuleGUI::InspectorTab()
+{
+	if (inspector)
+	{
+		if (ImGui::Begin("Inspector", &inspector)) 
+		{
+			// Place for the game objects characteristics
+		};
+	}
 	ImGui::End();
 }
 

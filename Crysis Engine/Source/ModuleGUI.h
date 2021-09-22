@@ -19,15 +19,23 @@ public:
 
 public:
 
-
+	void Docking();
 	void ExampleWindow();
 	void MenuWindow();
+	void HierarchyTab();
+	void AssetsTab();
+	void InspectorTab();
 
 private:
 
 	bool showDemoWindow = true;
 	bool anotherWindow = false;
 	bool toolActive;
+	bool docking;
+	bool hierarchy;
+	bool assets;
+	bool inspector;
+	update_status state;
 
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
