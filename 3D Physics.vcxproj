@@ -107,6 +107,7 @@
     <ClInclude Include="Crysis Engine\Source\Module.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleAudio.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleCamera3D.h" />
+    <ClInclude Include="Crysis Engine\Source\ModuleGUI.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleInput.h" />
     <ClInclude Include="Crysis Engine\Source\ModulePlayer.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleRenderer3D.h" />
@@ -133,6 +134,7 @@
     <ClCompile Include="Crysis Engine\Source\Main.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleAudio.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleCamera3D.cpp" />
+    <ClCompile Include="Crysis Engine\Source\ModuleGUI.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleInput.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModulePlayer.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleRenderer3D.cpp" />
