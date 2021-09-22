@@ -24,6 +24,7 @@ public:
 	void MenuWindow();
 	void HierarchyTab();
 	void AssetsTab();
+	void ConsoleTab();
 	void InspectorTab();
 
 private:
@@ -35,6 +36,7 @@ private:
 	bool hierarchy;
 	bool assets;
 	bool inspector;
+	bool console;
 	update_status state;
 
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);

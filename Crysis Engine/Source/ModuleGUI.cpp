@@ -74,6 +74,7 @@ update_status ModuleGUI::Update(float dt)
 	ExampleWindow();
 	HierarchyTab();
 	AssetsTab();
+	ConsoleTab();
 	InspectorTab();
 
 	// End of frame
@@ -205,7 +206,20 @@ void ModuleGUI::AssetsTab()
 		if (ImGui::Begin("Assets", &assets)) 
 		{
 			// Place for all the imported assets
-		};
+			if(ImGui::Button("Refresh Directory")) {};
+		}
+		ImGui::End();
+	}
+}
+
+void ModuleGUI::ConsoleTab()
+{
+	if (console)
+	{
+		if (ImGui::Begin("Console", &assets))
+		{
+
+		}
 		ImGui::End();
 	}
 }
