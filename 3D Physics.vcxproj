@@ -55,7 +55,7 @@
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\include;C:\Users\Usuario\Documents\GitHub\Crysis-Engine\Crysis Engine\Source\Dependencies\Assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <StructMemberAlignment>Default</StructMemberAlignment>
       <PreprocessorDefinitions>WINDOWS_IGNORE_PACKING_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -76,7 +76,7 @@
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\include;C:\Users\Usuario\Documents\GitHub\Crysis-Engine\Crysis Engine\Source\Dependencies\Assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <StructMemberAlignment>Default</StructMemberAlignment>
       <PreprocessorDefinitions>WINDOWS_IGNORE_PACKING_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -93,6 +93,81 @@
   <ItemGroup>
     <ClInclude Include="Crysis Engine\Source\Application.h" />
     <ClInclude Include="Crysis Engine\Source\Color.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\aabb.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\ai_assert.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\anim.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\BaseImporter.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\Bitmap.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\BlobIOSystem.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\ByteSwapper.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\camera.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\cexport.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\cfileio.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\cimport.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\ColladaMetaData.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\color4.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\commonMetaData.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\config.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\CreateAnimMesh.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\DefaultIOStream.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\DefaultIOSystem.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\DefaultLogger.hpp" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\Defines.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\defs.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\Exceptional.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\Exporter.hpp" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\fast_atof.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\GenericProperty.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\Hash.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\Importer.hpp" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\importerdesc.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\IOStream.hpp" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\IOStreamBuffer.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\IOSystem.hpp" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\light.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\LineSplitter.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\LogAux.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\Logger.hpp" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\LogStream.hpp" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\material.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\MathFunctions.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\matrix3x3.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\matrix4x4.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\MemoryIOWrapper.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\mesh.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\metadata.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\NullLogger.hpp" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\ParsingUtils.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\pbrmaterial.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\postprocess.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\Profiler.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\ProgressHandler.hpp" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\qnan.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\quaternion.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\RemoveComments.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\scene.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\SceneCombiner.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\SGSpatialSort.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\SkeletonMeshBuilder.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\SmallVector.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\SmoothingGroups.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\SpatialSort.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\StandardShapes.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\StreamReader.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\StreamWriter.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\StringComparison.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\StringUtils.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\Subdivision.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\texture.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\TinyFormatter.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\types.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\vector2.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\vector3.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\version.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\Vertex.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\XmlParser.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\XMLTools.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\ZipArchiveIOSystem.h" />
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_opengl3.h" />
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_sdl.h" />
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\imconfig.h" />
@@ -142,6 +217,16 @@
     <ClCompile Include="Crysis Engine\Source\ModuleWindow.cpp" />
     <ClCompile Include="Crysis Engine\Source\Primitive.cpp" />
     <ClCompile Include="Crysis Engine\Source\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\color4.inl" />
+    <None Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\material.inl" />
+    <None Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\matrix3x3.inl" />
+    <None Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\matrix4x4.inl" />
+    <None Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\quaternion.inl" />
+    <None Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\SmoothingGroups.inl" />
+    <None Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\vector2.inl" />
+    <None Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\vector3.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
