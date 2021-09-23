@@ -336,6 +336,9 @@
     <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\ZipArchiveIOSystem.h">
       <Filter>Deps\Assimp</Filter>
     </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleImporter.h">
+      <Filter>Sources\Modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Crysis Engine\Source\Color.cpp">
@@ -402,6 +405,9 @@
       <Filter>Deps\imGui</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\ModuleGUI.cpp">
+      <Filter>Sources\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\ModuleImporter.cpp">
       <Filter>Sources\Modules</Filter>
     </ClCompile>
   </ItemGroup>
