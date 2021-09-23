@@ -24,4 +24,5 @@ public:
 
 	void Init();
 	void CleanUp();
+	void LoadFile(const char* path);
 };

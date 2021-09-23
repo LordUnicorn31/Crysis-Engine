@@ -3,6 +3,7 @@
 #include "Globals.h"
 #include "glmath.h"
 #include "Light.h"
+#include <vector>
 
 #define MAX_LIGHTS 8
 
@@ -26,6 +27,7 @@ public:
 	void AssetsTab();
 	void ConsoleTab();
 	void InspectorTab();
+	void AboutWindow();
 
 private:
 
@@ -37,7 +39,9 @@ private:
 	bool assets;
 	bool inspector;
 	bool console;
-	update_status state;
+	bool about;
+
+	std::vector<char*> consoleLog;
 
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
