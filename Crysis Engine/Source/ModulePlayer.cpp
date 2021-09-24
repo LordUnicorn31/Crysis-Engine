@@ -68,9 +68,9 @@ update_status ModulePlayer::Update(float dt)
 	}
 
 
-	char title[80];
+	/*char title[80];*/
 
-	App->window->SetTitle(title);
+	App->window->SetTitle(TITLE);
 
 	return UPDATE_CONTINUE;
 }

@@ -235,7 +235,6 @@ void ModuleGUI::ConsoleTab()
 			{
 				ImGui::Text(consoleLog[i]);
 			}
-
 		}
 		ImGui::End();
 	}
@@ -274,7 +273,7 @@ void ModuleGUI::AboutWindow()
 			ImGui::Text("License:\n");
 			ImGui::Text("Copyright(c) 2020 Crysis Engine\n"
 					"Permission is hereby granted, free of charge, to any person obtaining a copy\n"
-					"of this softwareand associated documentation files(the ""Software""), to deal\n"
+					"of this software and associated documentation files(the ""Software""), to deal\n"
 					"in the Software without restriction, including without limitation the rights\n"
 					"to use, copy, modify, merge, publish, distribute, sublicense, and /or sell\n"
 					"copies of the Software, and to permit persons to whom the Software is\n"

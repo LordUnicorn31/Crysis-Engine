@@ -4,7 +4,6 @@
 #include "glmath.h"
 #include "Light.h"
 #include <vector>
-
 #define MAX_LIGHTS 8
 
 class ModuleGUI : public Module
