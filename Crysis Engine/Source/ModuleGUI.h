@@ -4,6 +4,7 @@
 #include "glmath.h"
 #include "Light.h"
 #include <vector>
+#include <string>
 #define MAX_LIGHTS 8
 
 class ModuleGUI : public Module
@@ -27,6 +28,7 @@ public:
 	void ConsoleTab();
 	void InspectorTab();
 	void AboutWindow();
+	void Log(const char* log);
 
 private:
 

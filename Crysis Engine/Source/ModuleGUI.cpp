@@ -259,7 +259,7 @@ void ModuleGUI::AboutWindow()
 		if (ImGui::Begin("About", &about))
 		{
 			ImGui::Text("Crysis Engine v0.3\n");
-			ImGui::Text("Created by Jordi Espriu\n");
+			ImGui::Text("Created by Jordi Espriu & Victor Nisa\n");
 			ImGui::Separator();
 			ImGui::Text("3rd Party Libraries used:\n");
 			ImGui::BulletText("SDL 2.06\n");
@@ -292,6 +292,27 @@ void ModuleGUI::AboutWindow()
 	}
 	
 }
+
+void ModuleGUI::Log(const char* log)
+{
+	if (App->scene_intro != nullptr)
+	{
+		std::string tmp = log;
+
+		// We look for the first character of the string
+		uint startLog = tmp.find_last_of("\\") + 1;
+		// We look for the last character of the string
+		uint endLog = tmp.size();
+
+		std::string sLog = tmp.substr(startLog, endLog);
+
+		char* newLog = strdup(sLog.c_str());
+		consoleLog.push_back(newLog);
+		tmp.clear();
+		sLog.clear();
+	}
+}
+
 bool ModuleGUI::CleanUp()
 {
 	return false;
