@@ -55,7 +55,7 @@
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\include;C:\Users\Usuario\Documents\GitHub\Crysis-Engine\Crysis Engine\Source\Dependencies\Assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\include;$(ProjectDir)Crysis Engine\Source\Dependencies\Assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <StructMemberAlignment>Default</StructMemberAlignment>
       <PreprocessorDefinitions>WINDOWS_IGNORE_PACKING_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -64,7 +64,7 @@
       <SubSystem>Windows</SubSystem>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;glew32.lib;opengl32.lib;assimp-vc142-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\lib\libWin32;C:\Users\Usuario\Documents\GitHub\Crysis-Engine\Crysis Engine\Source\Dependencies\Assimp;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86\;$(ProjectDir)Crysis Engine\Source\Dependencies\SDL_mixer\libx86;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\lib\libWin32;$(ProjectDir)Crysis Engine\Source\Dependencies\Assimp;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
