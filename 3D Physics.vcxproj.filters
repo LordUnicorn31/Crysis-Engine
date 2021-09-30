@@ -22,11 +22,14 @@
     <Filter Include="Deps">
       <UniqueIdentifier>{4c2c7c37-5287-4ac1-8348-3d4781fafaea}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Deps\imGui">
-      <UniqueIdentifier>{86614dac-9c7f-437e-b271-c8621bf3493c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Deps\Assimp">
       <UniqueIdentifier>{d9657e6d-d8a1-451b-b81b-e9e70af09c33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Deps\Parson">
+      <UniqueIdentifier>{6d51c5ff-2d34-4da9-a47a-00b0ae073622}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Deps\ImGui">
+      <UniqueIdentifier>{86614dac-9c7f-437e-b271-c8621bf3493c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -85,28 +88,28 @@
       <Filter>Sources</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\imconfig.h">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\imgui.h">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\imgui_internal.h">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\imstb_rectpack.h">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\imstb_textedit.h">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\imstb_truetype.h">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_sdl.h">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_opengl3.h">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\ModuleGUI.h">
       <Filter>Sources\Modules</Filter>
@@ -339,6 +342,9 @@
     <ClInclude Include="Crysis Engine\Source\ModuleImporter.h">
       <Filter>Sources\Modules</Filter>
     </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\Dependencies\parson\include\parson.h">
+      <Filter>Deps\Parson</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Crysis Engine\Source\Color.cpp">
@@ -387,28 +393,31 @@
       <Filter>Sources</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\imgui.cpp">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\imgui_demo.cpp">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\imgui_draw.cpp">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\imgui_widgets.cpp">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_sdl.cpp">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_opengl3.cpp">
-      <Filter>Deps\imGui</Filter>
+      <Filter>Deps\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\ModuleGUI.cpp">
       <Filter>Sources\Modules</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\ModuleImporter.cpp">
       <Filter>Sources\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\Dependencies\parson\src\parson.c">
+      <Filter>Deps\Parson</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
