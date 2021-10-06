@@ -55,7 +55,7 @@
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\include;$(ProjectDir)Crysis Engine\Source\Dependencies\Assimp\include;%(AdditionalIncludeDirectories);C:\Users\Usuario\Documents\GitHub\Crysis-Engine\Crysis Engine\Source\Dependencies\parson\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Crysis Engine\Source\Dependencies\SDL\include;$(ProjectDir)Crysis Engine\Source\Dependencies\imgui;$(ProjectDir)Crysis Engine\Source\Dependencies\glew-2.1.0\include;$(ProjectDir)Crysis Engine\Source\Dependencies\Assimp\include;%(AdditionalIncludeDirectories);$(ProjectDir)Crysis Engine\Source\Dependencies\parson\include</AdditionalIncludeDirectories>
       <StructMemberAlignment>Default</StructMemberAlignment>
       <PreprocessorDefinitions>WINDOWS_IGNORE_PACKING_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
