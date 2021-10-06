@@ -39,6 +39,7 @@ bool ModuleGUI::Init()
 	ImGui::StyleColorsDark();
 	//ImGui::StyleColorsClassic();
 	//ImGui::StyleColorsLight();
+	//ImGui::StyleColorsComedia();
 
 	// When viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to regular ones.
 	ImGuiStyle& style = ImGui::GetStyle();
