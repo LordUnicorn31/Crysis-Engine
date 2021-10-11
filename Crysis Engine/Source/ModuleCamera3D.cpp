@@ -192,15 +192,15 @@ void ModuleCamera3D::CameraMovement(vec3 camPos, float speed, float dt)
 		camPos.x += X.x * speed * dt * 100;
 	}
 
-	/*if (posY > 0)
+	if (posY > 0)
 	{
-		camPos.y += X.y * speed * dt * 100;
+		camPos.y += Y.y * speed * dt * 100;
     }
 
-	else
+	else if (posY < 0)
 	{
-		camPos.y -= X.y * speed * dt * 100;
-	}*/
+		camPos.y -= Y.y * speed * dt * 100;
+	}
 
 	Position += camPos;
 	Reference += camPos;
