@@ -179,12 +179,29 @@ void ModuleCamera3D::CalculateViewMatrix()
 
 void ModuleCamera3D::CameraMovement(vec3 camPos, float speed, float dt)
 {
-	int posX = App->input->GetMouseX();
-	int posY = App->input->GetMouseY();
+	int posX = App->input->GetMouseXMotion();
+	int posY = App->input->GetMouseYMotion();
+
 
 	if (posX > 0)
 	{
-		camPos += X * speed * dt;
+		camPos.x -= X.x * speed * dt * 100;
 	}
-	else camPos -= X * speed * dt;
+	else if (posX < 0)
+	{
+		camPos.x += X.x * speed * dt * 100;
+	}
+
+	/*if (posY > 0)
+	{
+		camPos.y += X.y * speed * dt * 100;
+    }
+
+	else
+	{
+		camPos.y -= X.y * speed * dt * 100;
+	}*/
+
+	Position += camPos;
+	Reference += camPos;
 }

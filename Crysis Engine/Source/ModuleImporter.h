@@ -25,4 +25,9 @@ public:
 	void Init();
 	void CleanUp();
 	void LoadFile(const char* path);
+
+private:
+
+	VertexData myMesh;
+	aiMesh* aMesh;
 };

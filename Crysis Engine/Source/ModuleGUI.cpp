@@ -12,6 +12,7 @@
 #include "imgui.h"
 #include "examples\imgui_impl_sdl.h"
 #include "examples\imgui_impl_opengl3.h"
+#include "GameObject.h"
 
 ModuleGUI::ModuleGUI(Application* app, bool start) : Module(app, start)
 {
@@ -60,6 +61,7 @@ bool ModuleGUI::Init()
 	hierarchy = true;
 	inspector = true;
 	about = false;
+	gameObject = false;
 
 	return true;
 }
@@ -179,7 +181,8 @@ void ModuleGUI::MenuWindow()
 				if (ImGui::MenuItem("Cone")) {};
 				if (ImGui::MenuItem("Empty GameObject")) 
 				{
-
+					App->scene_intro->CreateObject(new GameObject("Empty"));
+					gameObject = !gameObject;
 				};
 				ImGui::EndMenu();
 			}
@@ -208,6 +211,10 @@ void ModuleGUI::HierarchyTab()
 		if (ImGui::Begin("Hierarchy", &hierarchy))
 		{
 			// Place for gameobjects
+			if (gameObject)
+			{
+				ImGui::Text("Empty");
+			}
 		}
 		ImGui::End();
 	}

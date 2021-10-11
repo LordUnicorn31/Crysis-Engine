@@ -31,6 +31,9 @@
     <Filter Include="Deps\ImGui">
       <UniqueIdentifier>{86614dac-9c7f-437e-b271-c8621bf3493c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sources\Objects">
+      <UniqueIdentifier>{b4111b4f-25ab-410d-ba94-4da1eea6f1df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Crysis Engine\Source\Color.h">
@@ -345,6 +348,9 @@
     <ClInclude Include="Crysis Engine\Source\Dependencies\parson\include\parson.h">
       <Filter>Deps\Parson</Filter>
     </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\GameObject.h">
+      <Filter>Sources\Objects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Crysis Engine\Source\Color.cpp">
@@ -418,6 +424,9 @@
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\Dependencies\parson\src\parson.c">
       <Filter>Deps\Parson</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\GameObject.cpp">
+      <Filter>Sources\Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -177,6 +177,7 @@
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\imstb_textedit.h" />
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\imstb_truetype.h" />
     <ClInclude Include="Crysis Engine\Source\Dependencies\parson\include\parson.h" />
+    <ClInclude Include="Crysis Engine\Source\GameObject.h" />
     <ClInclude Include="Crysis Engine\Source\glmath.h" />
     <ClInclude Include="Crysis Engine\Source\Globals.h" />
     <ClInclude Include="Crysis Engine\Source\Light.h" />
@@ -206,6 +207,7 @@
     <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\imgui_draw.cpp" />
     <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Crysis Engine\Source\Dependencies\parson\src\parson.c" />
+    <ClCompile Include="Crysis Engine\Source\GameObject.cpp" />
     <ClCompile Include="Crysis Engine\Source\glmath.cpp" />
     <ClCompile Include="Crysis Engine\Source\Light.cpp" />
     <ClCompile Include="Crysis Engine\Source\log.cpp" />

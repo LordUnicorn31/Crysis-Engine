@@ -4,6 +4,7 @@
 #include "Globals.h"
 #include "Primitive.h"
 #include "imgui.h"
+#include "GameObject.h"
 
 #define MAX_SNAKE 2
 
@@ -21,6 +22,7 @@ public:
 	bool CleanUp();
 
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
+	GameObject* CreateObject(GameObject* gameObject);
 
 public:
 	/*
