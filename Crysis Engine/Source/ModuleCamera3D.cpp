@@ -57,12 +57,12 @@ update_status ModuleCamera3D::Update(float dt)
 		if (App->input->GetMouseZ() > 0)
 		{
 			// Zoom in
-			newPos -= Z * speed;
+			newPos -= Z * speed * 15;
 		}
 		if (App->input->GetMouseZ() < 0)
 		{
 			// Zoom out
-			newPos += Z * speed;
+			newPos += Z * speed * 15;
 		}
 
 	}
