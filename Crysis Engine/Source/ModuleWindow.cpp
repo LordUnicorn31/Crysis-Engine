@@ -16,6 +16,7 @@ ModuleWindow::~ModuleWindow()
 // Called before render is available
 bool ModuleWindow::Init()
 {
+
 	LOG("Init SDL window & surface");
 	bool ret = true;
 
@@ -68,6 +69,8 @@ bool ModuleWindow::Init()
 			screen_surface = SDL_GetWindowSurface(window);
 		}
 	}
+
+
 
 	return ret;
 }

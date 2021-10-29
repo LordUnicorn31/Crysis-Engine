@@ -1,6 +1,7 @@
 #include "Globals.h"
 #include "Application.h"
 #include "ModuleInput.h"
+#include "ModuleImporter.h"
 
 #define MAX_KEYS 300
 
@@ -103,8 +104,13 @@ update_status ModuleInput::PreUpdate(float dt)
 			break;
 
 			case SDL_DROPFILE:
-			LOG("File dropped! ");
-			break;
+			{
+				LOG("File dropped! ");
+				char* dropFile = e.drop.file;
+				mesh = importer->LoadFile("Assets/BakerHouse.fbx");
+				App->renderer3D->Draw(&mesh);
+				break;
+			}
 
 			case SDL_QUIT:
 			quit = true;

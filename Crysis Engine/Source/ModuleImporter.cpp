@@ -2,6 +2,7 @@
 #include "Globals.h"
 #include "GL/glew.h"
 
+GLuint meshBuffer;
 
 ModuleImporter::ModuleImporter() {};
 
@@ -14,21 +15,22 @@ void ModuleImporter::Init()
 	aiAttachLogStream(&stream);
 }
 
-void ModuleImporter::LoadFile(const char* path)
+VertexData ModuleImporter::LoadFile(const char* path)
 {
 	const aiScene* scene = aiImportFile(path, aiProcessPreset_TargetRealtime_MaxQuality);
-
+	VertexData mesh;
 	if (scene != nullptr && scene->HasMeshes())
 	{
 		//Use scene->numMeshes to iterate on scene->mMeshes array
 		for (int i = 0; i < scene->mNumMeshes; ++i)
 		{
+			VertexData myMesh;
 		
 			//Copy vertices
 			myMesh.numVertex = scene->mMeshes[i]->mNumVertices;
 			myMesh.vertex = new float[myMesh.numVertex * 3];
-			memcpy(myMesh.vertex, scene->mMeshes[i]->mVertices, sizeof(float) * myMesh.numVertex);
-			LOG("New mesh with %d vertices", myMesh.vertex);
+			memcpy(myMesh.vertex, scene->mMeshes[i]->mVertices, sizeof(float) * myMesh.numVertex * 3);
+			LOG("New mesh with %d vertices", myMesh.numVertex);
 
 			// copy faces
 			if (scene->mMeshes[i]->HasFaces())
@@ -49,11 +51,33 @@ void ModuleImporter::LoadFile(const char* path)
 				}
 			}
 
-			glGenBuffers(1, &myMesh.numVertex);
-			glBindBuffer(GL_ARRAY_BUFFER, myMesh.numVertex);
-			glBufferData(GL_ARRAY_BUFFER, sizeof(GLuint) * myMesh.numVertex, myMesh.index, GL_STATIC_DRAW);
+			CreateBuffer(myMesh);
+
+			mesh = myMesh;
 		}
 	}
+
+	return mesh;
+}
+
+void ModuleImporter::CreateBuffer(VertexData& mesh)
+{
+	glGenVertexArrays(1, &mesh.VAO);
+	glBindVertexArray(mesh.VAO);
+
+	glGenBuffers(1, &mesh.VBO);
+	glBindBuffer(GL_ARRAY_BUFFER, mesh.VBO);
+
+	glBufferData(GL_ARRAY_BUFFER, mesh.numVertex * sizeof(float) * 3, mesh.vertex, GL_STATIC_DRAW);
+
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mesh.EBO);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, mesh.numIndex * sizeof(unsigned int), mesh.index, GL_STATIC_DRAW);
+
+	// vertex positions
+	glEnableVertexAttribArray(0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 3, (void*)0);
+
+	glBindVertexArray(0);
 }
 
 void ModuleImporter::CleanUp()

@@ -18,6 +18,7 @@ public:
 	bool CleanUp();
 
 	void OnResize(int width, int height);
+	void Draw(VertexData* mesh);
 
 public:
 

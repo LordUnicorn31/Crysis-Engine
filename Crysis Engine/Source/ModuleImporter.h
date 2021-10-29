@@ -3,6 +3,7 @@
 #include "assimp/scene.h"
 #include "assimp/postprocess.h"
 #include "Globals.h"
+#include "GL/glew.h"
 
 struct VertexData
 {
@@ -13,6 +14,11 @@ struct VertexData
 	uint idVertex = 0; //Unique vertex in VRAM
 	uint numVertex = 0;
 	float* vertex = nullptr;
+
+	GLuint buffer = 0;
+	GLuint VAO;
+	GLuint VBO;
+	GLuint EBO;
 };
 
 class ModuleImporter
@@ -24,10 +30,11 @@ public:
 
 	void Init();
 	void CleanUp();
-	void LoadFile(const char* path);
+	VertexData LoadFile(const char* path);
+	void CreateBuffer(VertexData& mesh);
 
 private:
 
-	VertexData myMesh;
+
 	aiMesh* aMesh;
 };

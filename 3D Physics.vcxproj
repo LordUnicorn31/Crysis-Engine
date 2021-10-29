@@ -187,6 +187,7 @@
     <ClInclude Include="Crysis Engine\Source\ModuleGUI.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleImporter.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleInput.h" />
+    <ClInclude Include="Crysis Engine\Source\ModuleMesh.h" />
     <ClInclude Include="Crysis Engine\Source\ModulePlayer.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleRenderer3D.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleSceneIntro.h" />
@@ -217,6 +218,7 @@
     <ClCompile Include="Crysis Engine\Source\ModuleGUI.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleImporter.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleInput.cpp" />
+    <ClCompile Include="Crysis Engine\Source\ModuleMesh.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModulePlayer.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleRenderer3D.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleSceneIntro.cpp" />

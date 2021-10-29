@@ -351,6 +351,9 @@
     <ClInclude Include="Crysis Engine\Source\GameObject.h">
       <Filter>Sources\Objects</Filter>
     </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleMesh.h">
+      <Filter>Sources\Modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Crysis Engine\Source\Color.cpp">
@@ -427,6 +430,9 @@
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\GameObject.cpp">
       <Filter>Sources\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\ModuleMesh.cpp">
+      <Filter>Sources\Modules</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

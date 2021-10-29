@@ -1,6 +1,7 @@
 #pragma once
 #include "Module.h"
 #include "Globals.h"
+#include "ModuleImporter.h"
 
 #define MAX_MOUSE_BUTTONS 5
 
@@ -66,5 +67,8 @@ private:
 	int mouse_z;
 	int mouse_x_motion;
 	int mouse_y_motion;
+
+	ModuleImporter* importer;
+	VertexData mesh;
 	//int mouse_z_motion;
 };

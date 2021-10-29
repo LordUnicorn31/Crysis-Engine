@@ -12,6 +12,7 @@
 #include "ModuleGUI.h"
 #include "ModuleCamera3D.h"
 #include "ModulePlayer.h"
+#include "ModuleMesh.h"
 
 class Application
 {
@@ -24,6 +25,7 @@ public:
 	ModuleGUI* gui;
 	ModuleCamera3D* camera;
 	ModulePlayer* player;
+	ModuleMesh* mesh;
 
 private:
 

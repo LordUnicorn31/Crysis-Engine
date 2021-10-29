@@ -10,6 +10,7 @@ Application::Application()
 	gui = new ModuleGUI(this);
 	camera = new ModuleCamera3D(this);
 	player = new ModulePlayer(this);
+	mesh = new ModuleMesh(this);
 
 	// The order of calls is very important!
 	// Modules will Init() Start() and Update in this order
@@ -23,6 +24,7 @@ Application::Application()
 	
 	// Scenes
 	AddModule(scene_intro);
+	AddModule(mesh);
 	AddModule(gui);
 	AddModule(player);
 
