@@ -34,6 +34,9 @@
     <Filter Include="Sources\Objects">
       <UniqueIdentifier>{b4111b4f-25ab-410d-ba94-4da1eea6f1df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Deps\Glew">
+      <UniqueIdentifier>{81ceefd6-3755-40f8-84f8-6b2a86caf10d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Crysis Engine\Source\Color.h">
@@ -354,6 +357,21 @@
     <ClInclude Include="Crysis Engine\Source\ModuleMesh.h">
       <Filter>Sources\Modules</Filter>
     </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleTextures.h">
+      <Filter>Sources\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\Dependencies\glew-2.1.0\include\GL\eglew.h">
+      <Filter>Deps\Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\Dependencies\glew-2.1.0\include\GL\glew.h">
+      <Filter>Deps\Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\Dependencies\glew-2.1.0\include\GL\glxew.h">
+      <Filter>Deps\Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\Dependencies\glew-2.1.0\include\GL\wglew.h">
+      <Filter>Deps\Glew</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Crysis Engine\Source\Color.cpp">
@@ -432,6 +450,9 @@
       <Filter>Sources\Objects</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\ModuleMesh.cpp">
+      <Filter>Sources\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\ModuleTextures.cpp">
       <Filter>Sources\Modules</Filter>
     </ClCompile>
   </ItemGroup>

@@ -168,6 +168,10 @@
     <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\XmlParser.h" />
     <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\XMLTools.h" />
     <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\ZipArchiveIOSystem.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\glew-2.1.0\include\GL\eglew.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\glew-2.1.0\include\GL\glew.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\glew-2.1.0\include\GL\glxew.h" />
+    <ClInclude Include="Crysis Engine\Source\Dependencies\glew-2.1.0\include\GL\wglew.h" />
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_opengl3.h" />
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_sdl.h" />
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\imconfig.h" />
@@ -191,6 +195,7 @@
     <ClInclude Include="Crysis Engine\Source\ModulePlayer.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleRenderer3D.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleSceneIntro.h" />
+    <ClInclude Include="Crysis Engine\Source\ModuleTextures.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleWindow.h" />
     <ClInclude Include="Crysis Engine\Source\p2DynArray.h" />
     <ClInclude Include="Crysis Engine\Source\p2List.h" />
@@ -222,6 +227,7 @@
     <ClCompile Include="Crysis Engine\Source\ModulePlayer.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleRenderer3D.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleSceneIntro.cpp" />
+    <ClCompile Include="Crysis Engine\Source\ModuleTextures.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleWindow.cpp" />
     <ClCompile Include="Crysis Engine\Source\Primitive.cpp" />
     <ClCompile Include="Crysis Engine\Source\Timer.cpp" />
