@@ -56,6 +56,18 @@ update_status ModuleSceneIntro::Update(float dt)
 	// Update and Render additional Platform Windows
 	// (Platform functions may change the current OpenGL context, so we save/restore it to make it easier to paste this code elsewhere.
 	//  For this specific demo app we could also call SDL_GL_MakeCurrent(window, gl_context) directly)
+
+	if (App->input->GetKey(SDL_SCANCODE_F))
+	{
+		App->camera->CalculateViewMatrix();
+
+		App->camera->X = vec3(1.0f, 0.0f, 0.0f);
+		App->camera->Y = vec3(0.0f, 1.0f, 0.0f);
+		App->camera->Z = vec3(0.0f, 0.0f, 1.0f);
+
+		App->camera->Position = vec3(0.0f, 0.0f, 5.0f);
+		/*App->camera->Reference = vec3(0.0f, 0.0f, 0.0f);*/
+	}
 	
 	
 

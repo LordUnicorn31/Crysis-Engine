@@ -17,10 +17,10 @@ public:
 	void LookAt(const vec3 &Spot);
 	void Move(const vec3 &Movement);
 	float* GetViewMatrix();
+	void CalculateViewMatrix();
 
 private:
 
-	void CalculateViewMatrix();
 	void CameraMovement(vec3 camPos, float speed, float dt);
 
 public:
