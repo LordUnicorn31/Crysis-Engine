@@ -59,14 +59,15 @@ update_status ModuleSceneIntro::Update(float dt)
 
 	if (App->input->GetKey(SDL_SCANCODE_F))
 	{
-		App->camera->CalculateViewMatrix();
+		/*App->camera->CalculateViewMatrix();
 
 		App->camera->X = vec3(1.0f, 0.0f, 0.0f);
 		App->camera->Y = vec3(0.0f, 1.0f, 0.0f);
 		App->camera->Z = vec3(0.0f, 0.0f, 1.0f);
 
 		App->camera->Position = vec3(0.0f, 0.0f, 5.0f);
-		/*App->camera->Reference = vec3(0.0f, 0.0f, 0.0f);*/
+		App->camera->Reference = vec3(0.0f, 0.0f, 0.0f);*/
+		App->camera->Look({ 1.0, 1.0, 6.0 }, 0, false);
 	}
 	
 	
