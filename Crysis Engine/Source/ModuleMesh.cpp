@@ -22,6 +22,7 @@ bool ModuleMesh::Start()
 update_status ModuleMesh::Update(float dt)
 {
 	App->renderer3D->Draw(&mesh);
+	App->renderer3D->Draw(&App->input->mesh);
 	return UPDATE_CONTINUE;
 }
 

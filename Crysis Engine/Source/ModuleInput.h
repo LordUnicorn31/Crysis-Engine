@@ -69,6 +69,8 @@ private:
 	int mouse_y_motion;
 
 	ModuleImporter* importer;
-	VertexData mesh;
 	//int mouse_z_motion;
+
+public:
+	VertexData mesh;
 };
