@@ -26,6 +26,7 @@ ModuleGUI::~ModuleGUI()
 
 bool ModuleGUI::Init()
 {
+	exit = false;
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO(); (void)io;
@@ -163,7 +164,7 @@ void ModuleGUI::MenuWindow()
 			if (ImGui::MenuItem("Save", "Ctrl+S")) { /* Do stuff */ }
 			if (ImGui::MenuItem("Save As", "Ctrl+Shift+S")) {};
 			if (ImGui::MenuItem("Close", "Ctrl+W")) { toolActive = false; }
-			if (ImGui::MenuItem("Exit")) { }
+			if (ImGui::MenuItem("Exit")) { exit = true; }
 			ImGui::EndMenu();
 		}
 

@@ -79,6 +79,11 @@ int main(int argc, char ** argv)
 			break;
 
 		}
+
+		if (App->gui->exit == true)
+		{
+			state = MAIN_EXIT;
+		}
 	}
 
 	delete App;

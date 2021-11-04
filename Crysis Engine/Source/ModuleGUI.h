@@ -30,6 +30,8 @@ public:
 	void AboutWindow();
 	void Log(const char* log);
 
+	bool exit;
+
 private:
 
 	bool showDemoWindow = true;
