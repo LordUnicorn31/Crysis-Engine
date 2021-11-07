@@ -201,6 +201,7 @@
     <ClInclude Include="Crysis Engine\Source\p2List.h" />
     <ClInclude Include="Crysis Engine\Source\p2Point.h" />
     <ClInclude Include="Crysis Engine\Source\Primitive.h" />
+    <ClInclude Include="Crysis Engine\Source\stbi_image.h" />
     <ClInclude Include="Crysis Engine\Source\Timer.h" />
   </ItemGroup>
   <ItemGroup>

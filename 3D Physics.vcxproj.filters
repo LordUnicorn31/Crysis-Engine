@@ -37,6 +37,9 @@
     <Filter Include="Deps\Glew">
       <UniqueIdentifier>{81ceefd6-3755-40f8-84f8-6b2a86caf10d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Deps\STB">
+      <UniqueIdentifier>{3198a324-b1f1-4d07-a028-558f4273bd2a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Crysis Engine\Source\Color.h">
@@ -371,6 +374,9 @@
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\glew-2.1.0\include\GL\wglew.h">
       <Filter>Deps\Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\stbi_image.h">
+      <Filter>Deps\STB</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
