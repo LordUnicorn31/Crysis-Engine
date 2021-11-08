@@ -186,7 +186,6 @@
     <ClInclude Include="Crysis Engine\Source\Globals.h" />
     <ClInclude Include="Crysis Engine\Source\Light.h" />
     <ClInclude Include="Crysis Engine\Source\Module.h" />
-    <ClInclude Include="Crysis Engine\Source\ModuleAudio.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleCamera3D.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleGUI.h" />
     <ClInclude Include="Crysis Engine\Source\ModuleImporter.h" />
@@ -218,7 +217,6 @@
     <ClCompile Include="Crysis Engine\Source\Light.cpp" />
     <ClCompile Include="Crysis Engine\Source\log.cpp" />
     <ClCompile Include="Crysis Engine\Source\Main.cpp" />
-    <ClCompile Include="Crysis Engine\Source\ModuleAudio.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleCamera3D.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleGUI.cpp" />
     <ClCompile Include="Crysis Engine\Source\ModuleImporter.cpp" />

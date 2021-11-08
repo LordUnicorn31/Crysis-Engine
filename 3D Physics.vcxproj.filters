@@ -16,9 +16,6 @@
     <Filter Include="Sources\Helpers">
       <UniqueIdentifier>{121f8e6b-df36-4ab0-be0d-601ddfc9e503}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Sources\Modules\Game">
-      <UniqueIdentifier>{83f46af7-e02f-40c0-9e56-41d76082527b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Deps">
       <UniqueIdentifier>{4c2c7c37-5287-4ac1-8348-3d4781fafaea}</UniqueIdentifier>
     </Filter>
@@ -39,6 +36,15 @@
     </Filter>
     <Filter Include="Deps\STB">
       <UniqueIdentifier>{3198a324-b1f1-4d07-a028-558f4273bd2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Modules\Imports">
+      <UniqueIdentifier>{f7053f1e-ae3f-4f61-8327-7bc2ab50183a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Modules\Scenes">
+      <UniqueIdentifier>{83f46af7-e02f-40c0-9e56-41d76082527b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Modules\Core">
+      <UniqueIdentifier>{9fca22f2-9450-40a4-91b9-242ca9995b99}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -64,24 +70,9 @@
       <Filter>Sources\Helpers</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\ModuleSceneIntro.h">
-      <Filter>Sources\Modules\Game</Filter>
+      <Filter>Sources\Modules\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Module.h">
-      <Filter>Sources\Modules</Filter>
-    </ClInclude>
-    <ClInclude Include="Crysis Engine\Source\ModuleAudio.h">
-      <Filter>Sources\Modules</Filter>
-    </ClInclude>
-    <ClInclude Include="Crysis Engine\Source\ModuleCamera3D.h">
-      <Filter>Sources\Modules</Filter>
-    </ClInclude>
-    <ClInclude Include="Crysis Engine\Source\ModuleInput.h">
-      <Filter>Sources\Modules</Filter>
-    </ClInclude>
-    <ClInclude Include="Crysis Engine\Source\ModuleRenderer3D.h">
-      <Filter>Sources\Modules</Filter>
-    </ClInclude>
-    <ClInclude Include="Crysis Engine\Source\ModuleWindow.h">
       <Filter>Sources\Modules</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Timer.h">
@@ -116,9 +107,6 @@
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_opengl3.h">
       <Filter>Deps\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="Crysis Engine\Source\ModuleGUI.h">
-      <Filter>Sources\Modules</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\cimport.h">
       <Filter>Deps\Assimp</Filter>
@@ -345,20 +333,11 @@
     <ClInclude Include="Crysis Engine\Source\Dependencies\Assimp\include\assimp\ZipArchiveIOSystem.h">
       <Filter>Deps\Assimp</Filter>
     </ClInclude>
-    <ClInclude Include="Crysis Engine\Source\ModuleImporter.h">
-      <Filter>Sources\Modules</Filter>
-    </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\parson\include\parson.h">
       <Filter>Deps\Parson</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\GameObject.h">
       <Filter>Sources\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Crysis Engine\Source\ModuleMesh.h">
-      <Filter>Sources\Modules</Filter>
-    </ClInclude>
-    <ClInclude Include="Crysis Engine\Source\ModuleTextures.h">
-      <Filter>Sources\Modules</Filter>
     </ClInclude>
     <ClInclude Include="Crysis Engine\Source\Dependencies\glew-2.1.0\include\GL\eglew.h">
       <Filter>Deps\Glew</Filter>
@@ -375,6 +354,30 @@
     <ClInclude Include="Crysis Engine\Source\stbi_image.h">
       <Filter>Deps\STB</Filter>
     </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleImporter.h">
+      <Filter>Sources\Modules\Imports</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleTextures.h">
+      <Filter>Sources\Modules\Imports</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleGUI.h">
+      <Filter>Sources\Modules\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleMesh.h">
+      <Filter>Sources\Modules\Imports</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleCamera3D.h">
+      <Filter>Sources\Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleInput.h">
+      <Filter>Sources\Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleRenderer3D.h">
+      <Filter>Sources\Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis Engine\Source\ModuleWindow.h">
+      <Filter>Sources\Modules\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Crysis Engine\Source\Color.cpp">
@@ -390,22 +393,7 @@
       <Filter>Sources\Helpers</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\ModuleSceneIntro.cpp">
-      <Filter>Sources\Modules\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Crysis Engine\Source\ModuleAudio.cpp">
-      <Filter>Sources\Modules</Filter>
-    </ClCompile>
-    <ClCompile Include="Crysis Engine\Source\ModuleCamera3D.cpp">
-      <Filter>Sources\Modules</Filter>
-    </ClCompile>
-    <ClCompile Include="Crysis Engine\Source\ModuleInput.cpp">
-      <Filter>Sources\Modules</Filter>
-    </ClCompile>
-    <ClCompile Include="Crysis Engine\Source\ModuleRenderer3D.cpp">
-      <Filter>Sources\Modules</Filter>
-    </ClCompile>
-    <ClCompile Include="Crysis Engine\Source\ModuleWindow.cpp">
-      <Filter>Sources\Modules</Filter>
+      <Filter>Sources\Modules\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\log.cpp">
       <Filter>Sources\Tools</Filter>
@@ -437,23 +425,35 @@
     <ClCompile Include="Crysis Engine\Source\Dependencies\imgui\examples\imgui_impl_opengl3.cpp">
       <Filter>Deps\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="Crysis Engine\Source\ModuleGUI.cpp">
-      <Filter>Sources\Modules</Filter>
-    </ClCompile>
-    <ClCompile Include="Crysis Engine\Source\ModuleImporter.cpp">
-      <Filter>Sources\Modules</Filter>
-    </ClCompile>
     <ClCompile Include="Crysis Engine\Source\Dependencies\parson\src\parson.c">
       <Filter>Deps\Parson</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\GameObject.cpp">
       <Filter>Sources\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="Crysis Engine\Source\ModuleMesh.cpp">
-      <Filter>Sources\Modules</Filter>
+    <ClCompile Include="Crysis Engine\Source\ModuleImporter.cpp">
+      <Filter>Sources\Modules\Imports</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\ModuleTextures.cpp">
-      <Filter>Sources\Modules</Filter>
+      <Filter>Sources\Modules\Imports</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\ModuleGUI.cpp">
+      <Filter>Sources\Modules\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\ModuleMesh.cpp">
+      <Filter>Sources\Modules\Imports</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\ModuleCamera3D.cpp">
+      <Filter>Sources\Modules\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\ModuleInput.cpp">
+      <Filter>Sources\Modules\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\ModuleRenderer3D.cpp">
+      <Filter>Sources\Modules\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis Engine\Source\ModuleWindow.cpp">
+      <Filter>Sources\Modules\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
