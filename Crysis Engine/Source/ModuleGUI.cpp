@@ -109,10 +109,14 @@ update_status ModuleGUI::Update(float dt)
 
 void ModuleGUI::ExampleWindow()
 {
-	if(ImGui::Begin("Performance", &performance))
-	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+	if (ImGui::Begin("Performance", &performance))
+	{
+		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
-	ImGui::End();
+		ImGui::End();
+	}
+	
+
 }
 
 void ModuleGUI::Docking()
@@ -204,8 +208,9 @@ void ModuleGUI::HierarchyTab()
 			{
 				ImGui::Text("Empty");
 			}
+
+			ImGui::End();
 		}
-		ImGui::End();
 	}
 }
 
@@ -224,7 +229,7 @@ void ModuleGUI::AssetsTab()
 
 void ModuleGUI::ConsoleTab()
 {
-	if (console)
+	if (console && assets)
 	{
 		if (ImGui::Begin("Console", &assets))
 		{
@@ -232,6 +237,7 @@ void ModuleGUI::ConsoleTab()
 			{
 				ImGui::TextUnformatted(consoleLog[i]);
 			}
+
 		}
 		ImGui::End();
 	}
@@ -244,9 +250,10 @@ void ModuleGUI::InspectorTab()
 		if (ImGui::Begin("Inspector", &inspector)) 
 		{
 			// Place for the game objects characteristics
+			ImGui::End();
 		};
 	}
-	ImGui::End();
+	
 }
 
 void ModuleGUI::AboutWindow()
