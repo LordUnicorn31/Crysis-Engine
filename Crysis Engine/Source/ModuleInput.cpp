@@ -107,7 +107,7 @@ update_status ModuleInput::PreUpdate(float dt)
 			{
 				LOG("File dropped! ");
 				char* dropFile = e.drop.file;
-				mesh = importer->LoadFile("Assets/BakerHouse.fbx");
+				mesh = importer->LoadFile(dropFile);
 				break;
 			}
 
