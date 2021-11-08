@@ -129,6 +129,24 @@ bool Application::CleanUp()
 	return ret;
 }
 
+//void Application::AddConsoleLog(const char* string)
+//{
+//	if (app->gui != nullptr)
+//	{
+//		std::string tmp_log = string;
+//		//Ty Angel
+//		uint log_start_position = tmp_log.find_last_of("\\") + 1;
+//		uint log_end_position = tmp_log.size();
+//
+//		std::string short_log = tmp_log.substr(log_start_position, log_end_position);
+//
+//		gui->AddLog(short_log.c_str());
+//
+//		tmp_log.clear();
+//		short_log.clear();
+//	}
+//}
+
 void Application::AddModule(Module* mod)
 {
 	list_modules.add(mod);

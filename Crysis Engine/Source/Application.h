@@ -42,9 +42,13 @@ public:
 	update_status Update();
 	bool CleanUp();
 
+	void AddConsoleLog(const char* string);
+
 private:
 
 	void AddModule(Module* mod);
 	void PrepareUpdate();
 	void FinishUpdate();
 };
+
+extern Application* app;

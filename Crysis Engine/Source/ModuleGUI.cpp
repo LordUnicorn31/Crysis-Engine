@@ -244,7 +244,7 @@ void ModuleGUI::ConsoleTab()
 		{
 			for (int i = 0; i < consoleLog.size(); ++i)
 			{
-				ImGui::Text(consoleLog[i]);
+				ImGui::TextUnformatted(consoleLog[i]);
 			}
 		}
 		ImGui::End();
@@ -304,24 +304,22 @@ void ModuleGUI::AboutWindow()
 	
 }
 
-void ModuleGUI::Log(const char* log)
+
+
+void ModuleGUI::AddLog(const char* log)
 {
-	if (App->scene_intro != nullptr)
+	char* nString = strdup(log);
+	consoleLog.push_back(nString);
+}
+
+void ModuleGUI::ClearLog()
+{
+	for (uint i = 0; i < consoleLog.size(); ++i)
 	{
-		std::string tmp = log;
-
-		// We look for the first character of the string
-		uint startLog = tmp.find_last_of("\\") + 1;
-		// We look for the last character of the string
-		uint endLog = tmp.size();
-
-		std::string sLog = tmp.substr(startLog, endLog);
-
-		char* newLog = strdup(sLog.c_str());
-		consoleLog.push_back(newLog);
-		tmp.clear();
-		sLog.clear();
+		free(consoleLog[i]);
 	}
+
+	consoleLog.clear();
 }
 
 bool ModuleGUI::CleanUp()

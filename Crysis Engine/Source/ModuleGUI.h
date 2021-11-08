@@ -29,6 +29,8 @@ public:
 	void InspectorTab();
 	void AboutWindow();
 	void Log(const char* log);
+	void AddLog(const char* log);
+	void ClearLog();
 
 	bool exit;
 
