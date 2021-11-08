@@ -264,15 +264,26 @@ void ModuleGUI::AboutWindow()
 		{
 			ImGui::Text("Crysis Engine v0.3\n");
 			ImGui::Text("Created by Jordi Espriu & Victor Nisa\n");
+			ImGui::SameLine();
+			if (ImGui::Button("Jordi Espriu"))
+			{
+				ShellExecuteA(NULL, "open", "https://github.com/LordUnicorn31", NULL, NULL, 3);
+			}
+			ImGui::SameLine();
+			if (ImGui::Button("Victor Nisa"))
+			{
+				ShellExecuteA(NULL, "open", "https://github.com/VictorNisa", NULL, NULL, 3);
+			}
 			ImGui::Separator();
 			ImGui::Text("3rd Party Libraries used:\n");
 			ImGui::BulletText("SDL 2.06\n");
-			ImGui::BulletText("SDL Mixer 2.0.0\n");
+			ImGui::BulletText("OpenGL 3.1.0\n");
 			ImGui::BulletText("Glew 2.0.0\n");
 			ImGui::BulletText("ImGui\n");
 			ImGui::BulletText("MathGeoLib\n");
 			ImGui::BulletText("OpenGL 3.1.1\n");
 			ImGui::BulletText("Assimp 3.1.1\n");
+			ImGui::BulletText("STB\n");
 			ImGui::Separator();
 			ImGui::Text("License:\n");
 			ImGui::Text("Copyright(c) 2020 Crysis Engine\n"
