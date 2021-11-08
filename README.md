@@ -44,5 +44,5 @@ From these ones we only have implemented Close and Exit for now. "Close" closes 
 # Special information
 - Textures aren't implemented yet in this release because they were giving us a lot of trouble.
 - Some meshes don't import well when drag and dropping.
- 
+- You can drag and drop as many assets as we have in this release. However, the latest import messes up the other imports. So you will only see 1 correct import at a time.
 
