@@ -11,7 +11,6 @@
 #include "ModuleRenderer3D.h"
 #include "ModuleGUI.h"
 #include "ModuleCamera3D.h"
-#include "ModulePlayer.h"
 #include "ModuleMesh.h"
 
 class Application
@@ -24,7 +23,6 @@ public:
 	ModuleRenderer3D* renderer3D;
 	ModuleGUI* gui;
 	ModuleCamera3D* camera;
-	ModulePlayer* player;
 	ModuleMesh* mesh;
 
 private:

@@ -63,9 +63,6 @@
     <ClInclude Include="Crysis Engine\Source\Primitive.h">
       <Filter>Sources\Helpers</Filter>
     </ClInclude>
-    <ClInclude Include="Crysis Engine\Source\ModulePlayer.h">
-      <Filter>Sources\Modules\Game</Filter>
-    </ClInclude>
     <ClInclude Include="Crysis Engine\Source\ModuleSceneIntro.h">
       <Filter>Sources\Modules\Game</Filter>
     </ClInclude>
@@ -391,9 +388,6 @@
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\Primitive.cpp">
       <Filter>Sources\Helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="Crysis Engine\Source\ModulePlayer.cpp">
-      <Filter>Sources\Modules\Game</Filter>
     </ClCompile>
     <ClCompile Include="Crysis Engine\Source\ModuleSceneIntro.cpp">
       <Filter>Sources\Modules\Game</Filter>

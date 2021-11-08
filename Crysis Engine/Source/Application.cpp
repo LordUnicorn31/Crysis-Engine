@@ -9,7 +9,6 @@ Application::Application()
 	renderer3D = new ModuleRenderer3D(this);
 	gui = new ModuleGUI(this);
 	camera = new ModuleCamera3D(this);
-	player = new ModulePlayer(this);
 	mesh = new ModuleMesh(this);
 
 	// The order of calls is very important!
@@ -26,7 +25,6 @@ Application::Application()
 	AddModule(scene_intro);
 	AddModule(mesh);
 	AddModule(gui);
-	AddModule(player);
 
 	// Renderer last!
 	AddModule(renderer3D);
