@@ -61,6 +61,8 @@ bool ModuleGUI::Init()
 	docking = true;
 	hierarchy = true;
 	inspector = true;
+	console = true;
+	assets = true;
 	about = false;
 	gameObject = false;
 
