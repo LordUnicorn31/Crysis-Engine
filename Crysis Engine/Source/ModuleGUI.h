@@ -46,6 +46,7 @@ private:
 	bool console;
 	bool about;
 	bool gameObject;
+	bool performance;
 	std::vector<char*> consoleLog;
 
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
